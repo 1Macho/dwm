@@ -7,15 +7,15 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
-static const char col_gray1[]       = "#000a12";
+static const char col_gray1[]       = "#121212";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#00e5ff";
+static const char col_cyan[]        = "#3faa91";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { "#ffffff", "#000a12", "#4f5b62" },
-	[SchemeSel]  = { "#000000", "#00e5ff", "#00e5ff"  },
+	[SchemeNorm] = { "#cfcfcf", "#121212", "#4f4f4f" },
+	[SchemeSel]  = { "#242424", "#3faa91", "#3faa91"  },
 };
 
 /* tagging */
@@ -56,7 +56,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", "#000a12", "-nf", "#ffffff", "-sb", "#00e5ff", "-sf", "#000000", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", "#121212", "-nf", "#cfcfcf", "-sb", "#3faa91", "-sf", "#121212", NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
@@ -112,4 +112,3 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,	         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,	         Button3,        toggletag,      {0} },
 };
-
