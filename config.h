@@ -2,6 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int gappx     = 6;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -105,8 +106,8 @@ static Button buttons[] = {
 	{ ClkWinTitle,          0,     	         Button2,        zoom,           {0} },
 	{ ClkStatusText,        0,     	         Button2,        spawn,          {.v = termcmd } },
 	{ ClkClientWin,         MODKEY,	         Button1,        movemouse,      {0} },
-	{ ClkClientWin,         MODKEY,	         Button2,        togglefloating, {0} },
-	{ ClkClientWin,         MODKEY,  	 Button3,        resizemouse,    {0} },
+	{ ClkClientWin,         MODKEY,	         Button3,        togglefloating, {0} },
+	{ ClkClientWin,         MODKEY,  	 Button2,        resizemouse,    {0} },
 	{ ClkTagBar,            0,     	         Button1,        view,           {0} },
 	{ ClkTagBar,            0,     	         Button3,        toggleview,     {0} },
 	{ ClkTagBar,            MODKEY,	         Button1,        tag,            {0} },
